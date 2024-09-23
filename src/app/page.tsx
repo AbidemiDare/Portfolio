@@ -2,28 +2,31 @@
 
 import Link from "next/link";
 import style from "./page.module.css";
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { FaMoon, FaSun, FaXmark } from "react-icons/fa6";
+import { useEffect, useRef, useState } from "react";
+import { FaArrowRight } from "react-icons/fa6";
+import Image from "next/image";
+import { GoProjectSymlink } from "react-icons/go";
+import Navbar from "./components/navbar/navbar";
+import Typed from "typed.js";
+import Menu from "./components/menu/menu";
 
 export default function Home() {
   const [bar, setBar] = useState(false);
-  const [theme, setTheme] = useState(false);
+  const typedElement = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    if (theme) {
-      document.body.style.background = "#ffffff";
-      document.body.style.color = "#000000";
-    } else {
-      document.body.style.background = "#000000";
-      document.body.style.color = "#ffffff";
-    }
-
-    return () => {
-      document.body.style.background = "#000000";
-      document.body.style.color = "#ffffff";
+    const options = {
+      strings: ["Frontend Developer", "React Developer", "Computer Scientist"],
+      typeSpeed: 50,
+      backSpeed: 60,
+      loop: false,
     };
-  }, [theme]);
+
+    const typed = new Typed(typedElement.current!, options);
+    return () => {
+      typed.destroy();
+    };
+  }, []);
 
   const openBar = () => {
     setBar(!bar);
@@ -33,82 +36,47 @@ export default function Home() {
     setBar(bar === true ? false : true);
   };
 
-  const handleTheme = () => {
-    setTheme(!theme);
-  };
-
   return (
-    <div>
-      <nav className={style.navBar}>
-        <Link
-          className={style.topLink}
-          href="https://www.twitter.com/abidemi.darey"
-        >
-          <span>A</span>
-          <span>D</span>
-        </Link>
+    <div className={style.pageContainer}>
+      <div className={style.container}>
+        <Navbar bar={bar} openBar={openBar} />
+        <Menu bar={bar} closeBar={closeBar} />
 
-        <button className={style.navTheme} onClick={handleTheme}>
-          {theme ? (
-            <FaMoon className={style.themeMoon} />
-          ) : (
-            <FaSun className={style.themeSun} />
-          )}
-        </button>
+        {bar && (
+          <section className={style.hero}>
+            <Image
+              className={style.portfolioImg}
+              src="/Images/portfolioImg.jpg"
+              width={200}
+              height={200}
+              alt="portfolio img"
+            />
 
-        <ul className={style.navLinks}>
-          <li className={style.navLink}>
-            <Link href="" className={style.link}>
-              about
-            </Link>
-          </li>
-          <li className={style.navLink}>
-            <Link href="" className={style.link}>
-              projects
-            </Link>
-          </li>
-          <li className={style.navLink}>
-            <Link href="" className={style.link}>
-              contact
-            </Link>
-          </li>
-        </ul>
-
-        <button
-          className={`${style.faBar} ${bar ? style.show : " "}`}
-          onClick={openBar}
-        >
-          <div className={style.barOne}></div>
-          <div className={style.barTwo}></div>
-          <div className={style.barThree}></div>
-        </button>
-      </nav>
-
-      <motion.div
-        className={`${style.menuBar} ${bar ? style.show : " "}`}
-        initial={{ opacity: 0, display: "none", x: 200 }}
-        animate={bar ? { opacity: 1, display: "block", x: 0 } : {}}
-        transition={{ delay: 0.5, duration: 1.5, type: "spring" }}
-      >
-        <FaXmark className={style.closeMenuBar} onClick={closeBar} />
-        <ul className={style.menuLinks}>
-          <li className={style.menuLink}>
-            <Link href="" className={style.link}>
-              about
-            </Link>
-          </li>
-          <li className={style.menuLink}>
-            <Link href="" className={style.link}>
-              projects
-            </Link>
-          </li>
-          <li className={style.menuLink}>
-            <Link href="" className={style.link}>
-              contact
-            </Link>
-          </li>
-        </ul>
-      </motion.div>
+            <div className={style.heroInfo}>
+              <h2 className={style.heroTitle}>
+                Hi, I&apos;m a <span ref={typedElement}></span>
+              </h2>
+              <p className={style.heroCourse}>
+                Creating modern and User-friendly Applications
+              </p>
+              <div className={style.heroBtns}>
+                <Link
+                  href="/projects"
+                  className={`${style.heroBtn} ${style.heroProjectBtn}`}
+                >
+                  Projects <GoProjectSymlink className={style.heroIcon} />
+                </Link>
+                <Link
+                  href="/contact"
+                  className={`${style.heroBtn} ${style.heroContactBtn}`}
+                >
+                  Contact me <FaArrowRight className={style.heroIcon} />
+                </Link>
+              </div>
+            </div>
+          </section>
+        )}
+      </div>
     </div>
   );
 }

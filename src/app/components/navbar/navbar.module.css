@@ -1,0 +1,161 @@
+.navBar {
+  max-width: 92%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.topLink {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.navTheme {
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.themeSun,
+.themeMoon {
+  font-size: 1.8rem;
+}
+
+.themeSun {
+  color: wheat;
+  padding: 0.3rem;
+}
+
+.themeMoon {
+  color: brown;
+}
+
+.navLinks {
+  display: none;
+}
+
+.faBar {
+  background: white;
+  padding: 0.3rem 0.2rem;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+
+.faBar div {
+  width: 25px;
+  height: 3px;
+  background-color: burlywood;
+  margin-bottom: 5px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.faBar div:last-child {
+  margin-bottom: 0;
+}
+
+.menuBar {
+  background: lightgrey;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 40vh;
+  z-index: 2;
+}
+
+.menuBar::before {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  display: block;
+}
+
+.show .barOne {
+  transform: translate(0, 8px) rotate(-45deg);
+  -webkit-transform: translate(0, 8px) rotate(-45deg);
+  -moz-transform: translate(0, 8px) rotate(-45deg);
+  -ms-transform: translate(0, 8px) rotate(-45deg);
+  -o-transform: translate(0, 8px) rotate(-45deg);
+}
+
+.show .barTwo {
+  opacity: 0;
+}
+
+.show .barThree {
+  transform: translate(0, -8px) rotate(45deg);
+  -webkit-transform: translate(0, -8px) rotate(45deg);
+  -moz-transform: translate(0, -8px) rotate(45deg);
+  -ms-transform: translate(0, -8px) rotate(45deg);
+  -o-transform: translate(0, -8px) rotate(45deg);
+}
+
+@media screen and (min-width: 520px) {
+  .navLinks {
+    display: flex;
+    align-items: center;
+    gap: 0 0.7rem;
+  }
+
+  .navLink .link {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  .faBar {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .navBar {
+    max-width: 90vw;
+    margin: 0 auto;
+  }
+
+  .themeSun,
+  .themeMoon {
+    font-size: 1.8rem;
+  }
+
+  .navLinks {
+    gap: 0 1rem;
+  }
+
+  .navLink .link {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .navLink .link {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .navLink .link:hover {
+    color: red;
+  }
+}

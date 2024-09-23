@@ -10,7 +10,7 @@ body {
 }
 
 body {
-  background: var(--foreground);
+  /* background: #6a5837; */
   color: var(--background);
   font-family: "Lato", sans-serif;
 }
@@ -28,10 +28,4 @@ a {
 
 li {
   list-style-type: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }
