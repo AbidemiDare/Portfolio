@@ -1,0 +1,92 @@
+.skillsSection {
+  width: 85vw;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.skillsTitle {
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  color: goldenrod;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: auto auto;
+  place-items: center;
+  gap: 1rem 0;
+}
+
+.skill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.2rem 0;
+}
+
+.skillLogo {
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  border-radius: 50%;
+  gap: 5px 0;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.htmlLogo {
+  color: #ffffff;
+  background: #e34f26;
+}
+
+.cssLogo {
+  color: #ffffff;
+  background: #1572b6;
+}
+
+.jsLogo {
+  background: #f7df1e;
+  color: #000000;
+}
+
+.reactLogo {
+  background: #61dafb;
+  color: #ffffff;
+}
+
+.nextLogo {
+  background: black;
+  color: white;
+}
+
+.typeLogo {
+  background: #3178c6;
+  color: #ffffff;
+}
+
+.gitLogo {
+  background: #f05033;
+  color: #333333;
+}
+
+.githubLogo {
+  color: #181717;
+  background: #ffffff;
+}
+
+@media screen and (min-width: 520px) {
+  .skills {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .skills {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}

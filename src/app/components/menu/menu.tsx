@@ -1,16 +1,20 @@
-"use client"
-import React from 'react'
+"use client";
+
+import React from "react";
 import { motion } from "framer-motion";
-import style from "./menu.module.css"
-import { FaXmark } from 'react-icons/fa6';
-import Link from 'next/link';
+import style from "./menu.module.css";
+import { FaXmark } from "react-icons/fa6";
+import Link from "next/link";
 
 interface menuProps {
- bar?: boolean;
- closeBar?: VoidFunction;
+  bar?: boolean;
+  setBar: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export default function Menu({bar, closeBar}: menuProps) {
+const Menu: React.FC<menuProps> = ({ bar, setBar }) => {
+  const closeBar = () => {
+    setBar(bar === true ? false : true);
+  };
 
   return (
     <div>
@@ -41,4 +45,6 @@ export default function Menu({bar, closeBar}: menuProps) {
       </motion.div>
     </div>
   );
-}
+};
+
+export default Menu;

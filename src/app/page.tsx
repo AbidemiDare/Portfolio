@@ -2,81 +2,79 @@
 
 import Link from "next/link";
 import style from "./page.module.css";
-import { useEffect, useRef, useState } from "react";
-import { FaArrowRight } from "react-icons/fa6";
+import { useEffect, useRef } from "react";
+import { FaArrowRight, FaUser } from "react-icons/fa6";
 import Image from "next/image";
-import { GoProjectSymlink } from "react-icons/go";
-import Navbar from "./components/navbar/navbar";
 import Typed from "typed.js";
-import Menu from "./components/menu/menu";
+import { BsPersonWorkspace } from "react-icons/bs";
+import About from "./components/about/about";
+import Project from "./components/projects/project";
+import Skills from "./components/skills/skills";
 
-export default function Home() {
-  const [bar, setBar] = useState(false);
-  const typedElement = useRef<HTMLDivElement | null>(null);
+// interface homeProps {
+//   bar?: boolean;
+// }
+
+const Home = () => {
+  const typedElement = useRef<HTMLSpanElement | null>(null);
 
   useEffect(() => {
     const options = {
       strings: ["Frontend Developer", "React Developer", "Computer Scientist"],
       typeSpeed: 50,
       backSpeed: 60,
-      loop: false,
+      loop: true,
     };
 
-    const typed = new Typed(typedElement.current!, options);
-    return () => {
-      typed.destroy();
-    };
+    if (typedElement.current) {
+      const typed = new Typed(typedElement.current, options);
+
+      return () => typed.destroy();
+    }
   }, []);
 
-  const openBar = () => {
-    setBar(!bar);
-  };
-
-  const closeBar = () => {
-    setBar(bar === true ? false : true);
-  };
-
   return (
-    <div className={style.pageContainer}>
+    <>
       <div className={style.container}>
-        <Navbar bar={bar} openBar={openBar} />
-        <Menu bar={bar} closeBar={closeBar} />
-
-        {bar && (
+        <div className={style.heroContainer}>
           <section className={style.hero}>
-            <Image
-              className={style.portfolioImg}
-              src="/Images/portfolioImg.jpg"
-              width={200}
-              height={200}
-              alt="portfolio img"
-            />
+            <div className={style.portfolioImgContainer}>
+              <Image
+                className={style.portfolioImg}
+                src="/Images/portfolioImg.jpg"
+                width={180}
+                height={180}
+                alt="portfolio img"
+              />
+            </div>
 
             <div className={style.heroInfo}>
+              <h1 className={style.heroName}>
+                <span>
+                  <FaUser />
+                </span>{" "}
+                Adewakun Oluwadamilare{" "}
+              </h1>
               <h2 className={style.heroTitle}>
-                Hi, I&apos;m a <span ref={typedElement}></span>
+                <BsPersonWorkspace className={style.heroBsIcon} />{" "}
+                <span ref={typedElement}></span>
               </h2>
-              <p className={style.heroCourse}>
-                Creating modern and User-friendly Applications
-              </p>
-              <div className={style.heroBtns}>
-                <Link
-                  href="/projects"
-                  className={`${style.heroBtn} ${style.heroProjectBtn}`}
-                >
-                  Projects <GoProjectSymlink className={style.heroIcon} />
-                </Link>
-                <Link
-                  href="/contact"
-                  className={`${style.heroBtn} ${style.heroContactBtn}`}
-                >
-                  Contact me <FaArrowRight className={style.heroIcon} />
-                </Link>
-              </div>
             </div>
+
+            <Link href="/contact" className={style.heroBtn}>
+              Hire me <FaArrowRight className={style.heroArrow} />
+            </Link>
           </section>
-        )}
+
+          <About />
+        </div>
+
+        {/* <div className={style.underline}></div> */}
+        <Project />
+        <Skills />
       </div>
-    </div>
+    </>
   );
-}
+};
+
+export default Home;

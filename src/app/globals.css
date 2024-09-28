@@ -10,7 +10,6 @@ body {
 }
 
 body {
-  /* background: #6a5837; */
   color: var(--background);
   font-family: "Lato", sans-serif;
 }

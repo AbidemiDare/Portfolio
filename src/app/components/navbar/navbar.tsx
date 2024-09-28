@@ -5,14 +5,11 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { FaMoon, FaSun } from "react-icons/fa6";
 import style from "./navbar.module.css";
+// import Home from "@/app/page";
+import Menu from "../menu/menu";
 
-interface navProps {
-  bar?: boolean;
-  openBar?: VoidFunction;
-  // Navbar: VoidFunction;
-}
-
-export default function Navbar({ bar, openBar }: navProps) {
+export default function Navbar() {
+  const [bar, setBar] = useState<boolean>(false);
   const [theme, setTheme] = useState(false);
 
   useEffect(() => {
@@ -34,15 +31,20 @@ export default function Navbar({ bar, openBar }: navProps) {
     setTheme(!theme);
   };
 
+  const openBar = () => {
+    setBar(!bar);
+  };
+
   return (
     <div>
+      {/* <Home bar={bar}/> */}
       <nav className={style.navBar}>
         <Link
           className={style.topLink}
           href="https://www.twitter.com/abidemi.darey"
         >
-          <span>A</span>
-          <span>D</span>
+          <span className={style.topLinkOne}>Abidemi</span>
+          <span className={style.topLinkTwo}>Dare</span>
         </Link>
 
         <button className={style.navTheme} onClick={handleTheme}>
@@ -80,6 +82,9 @@ export default function Navbar({ bar, openBar }: navProps) {
           <div className={style.barThree}></div>
         </button>
       </nav>
+      <hr className={style.navHorizontal} />
+
+      <Menu bar={bar} setBar={setBar} />
     </div>
   );
 }
