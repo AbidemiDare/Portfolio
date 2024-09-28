@@ -10,6 +10,7 @@ import { BsPersonWorkspace } from "react-icons/bs";
 import About from "./components/about/about";
 import Project from "./components/projects/project";
 import Skills from "./components/skills/skills";
+import Contact from "./components/contact/contact";
 
 // interface homeProps {
 //   bar?: boolean;
@@ -72,6 +73,7 @@ const Home = () => {
         {/* <div className={style.underline}></div> */}
         <Project />
         <Skills />
+        <Contact/>
       </div>
     </>
   );

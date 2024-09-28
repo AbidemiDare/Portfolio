@@ -1,5 +1,6 @@
 .aboutSection {
-  padding: 2rem 0;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
   width: 85vw;
   margin: 0 auto;
 }
@@ -13,7 +14,7 @@
   background: white;
   width: 7rem;
   height: 2px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.7rem;
   position: relative;
 }
 

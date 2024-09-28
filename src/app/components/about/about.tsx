@@ -43,7 +43,10 @@ export default function About() {
           <p>
             As i continue my studies in Computer Science, I&apos;m motivated to
             pushing my limits and contributing to the rapidly evolving tech
-            landscape. Connect with me on{" "}
+            landscape.
+          </p>
+          <p>
+            Connect with me on{" "}
             <Link
               target="_blank"
               href="https://www.linkedin.com/in/adewakun-oluwadamilare-641b22281/"
@@ -55,10 +58,7 @@ export default function About() {
               <span className={style.linkSpan}>GitHub</span>
             </Link>{" "}
             and reach me directly at{" "}
-            <Link
-              target="_blank"
-              href="https://mail.google.com/mail/u/0/#inbox"
-            >
+            <Link target="_blank" href="mailto:oluwadamilareadewakun@gmail.com">
               <span className={style.linkSpan}>Email.</span>
             </Link>
           </p>

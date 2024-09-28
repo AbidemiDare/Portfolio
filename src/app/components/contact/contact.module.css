@@ -1,0 +1,27 @@
+.contact {
+  padding: 2rem 0;
+  width: 85vw;
+  margin: 0 auto;
+}
+
+.contactTitle {
+  color: goldenrod;
+  margin-bottom: 1rem;
+}
+
+.contactDescription {
+  color: silver;
+  margin-bottom: 0.5rem;
+}
+
+.contactDetails {
+ display: grid;
+ grid-template-columns: 1fr;
+}
+
+.contactLink {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 0 0.5rem;
+}

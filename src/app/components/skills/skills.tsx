@@ -61,6 +61,19 @@ export default function Skills() {
             GitHub
           </div>
         </div>
+
+        <div className={style.technicalSkills}>
+          <h3 className={style.technicalSkillTitle}>
+            Other soft skills includes:
+          </h3>
+          <ul>
+            <li>problem solving skills</li>
+            <li>Adaptability</li>
+            <li>Critical thinking skills</li>
+            <li>Time management</li>
+            <li>Collaboration</li>
+          </ul>
+        </div>
       </section>
     </>
   );

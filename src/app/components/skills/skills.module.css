@@ -12,9 +12,9 @@
 
 .skills {
   display: grid;
-  grid-template-columns: auto auto;
-  place-items: center;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem 0;
+  margin-bottom: 1rem;
 }
 
 .skill {
@@ -26,17 +26,17 @@
 }
 
 .skillLogo {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   display: grid;
   place-items: center;
-  font-size: 2rem;
+  font-size: 1.6rem;
   border-radius: 50%;
   gap: 5px 0;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+  -webkit-border-radius: ;
+  -moz-border-radius: ;
+  -ms-border-radius: ;
+  -o-border-radius: ;
 }
 
 .htmlLogo {
@@ -79,14 +79,41 @@
   background: #ffffff;
 }
 
+.technicalSkills {
+  width: 85vw;
+  margin: 0 auto;
+}
+
+.technicalSkillTitle {
+  margin-bottom: 1rem;
+}
+
+.technicalSkills ul {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.technicalSkills ul li {
+  list-style-type: square;
+  margin-bottom: 0.3rem;
+}
+
 @media screen and (min-width: 520px) {
   .skills {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .technicalSkills ul {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (min-width: 992px) {
   .skills {
     grid-template-columns: repeat(8, 1fr);
+  }
+
+  .technicalSkills ul {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
