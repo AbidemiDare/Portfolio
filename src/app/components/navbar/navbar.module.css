@@ -51,18 +51,12 @@
 }
 
 .faBar {
-  /*background: white;
-  */
   background: none;
   padding: 0.3rem 0.2rem;
   border-radius: 2px;
   border: none;
   cursor: pointer;
   outline: none;
-  -webkit-border-radius: ;
-  -moz-border-radius: ;
-  -ms-border-radius: ;
-  -o-border-radius: ;
 }
 
 .faBar div {

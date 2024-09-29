@@ -1,7 +1,14 @@
 import React from "react";
 import style from "./contact.module.css";
 import Link from "next/link";
-import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa6";
+import {
+  FaEnvelope,
+  FaFacebook,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaX,
+} from "react-icons/fa6";
 
 const Contact = () => {
   return (
@@ -15,36 +22,58 @@ const Contact = () => {
 
         <div className={style.contactDetails}>
           <div className={style.contactLink}>
+            <span className={style.contactEmail}>
+              <FaEnvelope />
+            </span>
             <Link target="_blank" href="mailto:oluwadamilareadewakun@gmail.com">
               {" "}
-              <FaEnvelope />
               oluwadamilareadewakun@gmail.com
             </Link>
           </div>
 
           <div className={style.contactLink}>
+            <span className={style.contactLinkedin}>
+              <FaLinkedin />
+            </span>{" "}
             <Link
               target="_blank"
               href="https://www.linkedin.com/in/adewakun-oluwadamilare-641b22281/"
             >
               {" "}
-              <FaLinkedin /> @Adewakun Oluwadamilare
+              Adewakun Oluwadamilare
             </Link>
           </div>
 
           <div className={style.contactLink}>
+            <span className={style.contactFacebook}>
+              <FaGithubcd />
+            </span>
             <Link target="_blank" href="https://github.com/AbidemiDare">
               {" "}
-              <FaFacebook />
-              @AbidemiDare
+              AbidemiDare
             </Link>{" "}
           </div>
 
           <div className={style.contactLink}>
+            <span className={style.contactGitHub}>
+              <FaX />
+            </span>
             <Link target="_blank" href="https://x.com/Abidemi_Darey">
               {" "}
-              <FaGithub />
-              @Abidemi_Darey
+              Abidemi_Darey
+            </Link>{" "}
+          </div>
+
+          <div className={style.contactLink}>
+            <span className={style.contactIg}>
+              <FaInstagram />
+            </span>
+            <Link
+              target="_blank"
+              href="https://www.instagram.com/abidemi.dare/"
+            >
+              {" "}
+              abidemi.dare
             </Link>{" "}
           </div>
         </div>

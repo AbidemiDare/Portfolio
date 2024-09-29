@@ -11,17 +11,29 @@
 
 .contactDescription {
   color: silver;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
 }
 
 .contactDetails {
- display: grid;
- grid-template-columns: 1fr;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem 0;
 }
 
 .contactLink {
- display: flex;
- align-items: center;
- justify-content: center;
- gap: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0 0.3rem;
+}
+
+.contactEmail {
+  color: darkblue;
+}
+
+.contactLinkedin {
+  color: blue;
+}
+
+.contactFacebook {
+  color: blue;
 }
