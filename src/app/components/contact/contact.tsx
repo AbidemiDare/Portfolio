@@ -3,7 +3,6 @@ import style from "./contact.module.css";
 import Link from "next/link";
 import {
   FaEnvelope,
-  FaFacebook,
   FaGithub,
   FaInstagram,
   FaLinkedin,
@@ -46,7 +45,7 @@ const Contact = () => {
 
           <div className={style.contactLink}>
             <span className={style.contactFacebook}>
-              <FaGithubcd />
+              <FaGithub />
             </span>
             <Link target="_blank" href="https://github.com/AbidemiDare">
               {" "}

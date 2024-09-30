@@ -1,3 +1,5 @@
+import React from "react";
+
 import Image from "next/image";
 import Link from "next/link";
 import style from "./projects.module.css";
@@ -30,12 +32,22 @@ export default function Project() {
                   <span>Core technologies</span>: ReactJs and NextJs
                 </p>
               </div>
+            </div>
+
+            <div className={style.projectLinks}>
+              <Link
+                className={style.firstLink}
+                target="_blank"
+                href="https://github.com/AbidemiDare/Dwares"
+              >
+                GitHub
+              </Link>
               <Link
                 target="_blank"
                 className={style.projectLink}
                 href="https://dwares.netlify.app/"
               >
-                Dwares
+                Live Demo
               </Link>
             </div>
           </div>
@@ -62,12 +74,22 @@ export default function Project() {
                   <span>Core technology</span>: JavaScript
                 </p>
               </div>
+            </div>
+
+            <div className={style.projectLinks}>
+              <Link
+                target="_blank"
+                href="https://github.com/AbidemiDare/BBNPS"
+                className={style.firstLink}
+              >
+                GitHub
+              </Link>
               <Link
                 target="_blank"
                 className={style.projectLink}
                 href="https://bbnps.netlify.app/"
               >
-                Bbnps
+                Live Demo
               </Link>
             </div>
           </div>
@@ -94,12 +116,22 @@ export default function Project() {
                   <span>Core technology</span>: JavaScript
                 </p>
               </div>
+            </div>
+
+            <div className={style.projectLinks}>
+              <Link
+                target="_blank"
+                href="https://github.com/AbidemiDare/BBNPS"
+                className={style.firstLink}
+              >
+                GitHub
+              </Link>
               <Link
                 target="_blank"
                 className={style.projectLink}
                 href="https://bbnps.netlify.app/"
               >
-                Bbnps
+                Live Demo
               </Link>
             </div>
           </div>

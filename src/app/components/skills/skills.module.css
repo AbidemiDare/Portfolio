@@ -33,6 +33,10 @@
   font-size: 1.6rem;
   border-radius: 50%;
   gap: 5px 0;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 .htmlLogo {
@@ -85,12 +89,14 @@
 }
 
 .technicalSkills ul {
+  width: 85vw;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
 }
 
 .technicalSkills ul li {
-  list-style-type: square;
+  list-style-type: circle;
   margin-bottom: 0.3rem;
 }
 

@@ -1,11 +1,10 @@
 .hero {
-  /* height: 80vh; */
   width: 85vw;
   margin: 0 auto;
-  margin-top: 90px;
+  margin-top: 100px;
   display: grid;
   place-items: center;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
 }
 
 .portfolioImgContainer {
@@ -13,10 +12,10 @@
   margin-bottom: 0.8rem;
   border: 5px solid white;
   border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+  -webkit-border-radius: ;
+  -moz-border-radius: ;
+  -ms-border-radius: ;
+  -o-border-radius: ;
   overflow: hidden;
 }
 
@@ -41,6 +40,10 @@
   object-fit: cover;
   display: block;
   border-radius: 50%;
+  -webkit-border-radius: ;
+  -moz-border-radius: ;
+  -ms-border-radius: ;
+  -o-border-radius: ;
 }
 
 .heroInfo {
@@ -99,7 +102,7 @@
   position: relative;
 }
 
-.heroBtn::before {
+/* .heroBtn::before {
   content: "";
   position: absolute;
   top: 0;
@@ -113,11 +116,11 @@
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
-}
+} */
 
-.heroBtn:hover::after {
+/* .heroBtn:hover::after {
   width: 100%;
-}
+} */
 
 .heroArrow {
   margin-top: 5px;
@@ -135,6 +138,7 @@
   .heroContainer {
     width: 95vw;
     margin: 0 auto;
+    margin-top: -1rem;
     display: grid;
     place-items: center;
     grid-template-columns: auto auto;
@@ -162,7 +166,7 @@
   }
 
   .hero {
-    margin-top: 50px;
+    margin-top: 60px;
     width: 30vw;
   }
 
@@ -176,5 +180,70 @@
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
     font-weight: bold;
+  }
+}
+
+/* Fixed Links  */
+
+.fixedLinks {
+  position: fixed;
+  bottom: 2%;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.showFixed {
+  opacity: 1;
+  visibility: visible;
+}
+
+.fixedWrapper {
+  background: white;
+  width: 85vw;
+  margin: 0 auto;
+  padding: 0.5rem 0;
+  border-radius: 1.5rem;
+  -webkit-border-radius: ;
+  -moz-border-radius: ;
+  -ms-border-radius: ;
+  -o-border-radius: ;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.fixedBtn {
+  border: none;
+  background: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.fixedEnvelope {
+  color: rgba(255, 0, 0, 0.7);
+}
+
+.fixedLinkedIn {
+  color: #0000ff;
+}
+
+.fixedGithub {
+  color: black;
+}
+
+.fixedX {
+  color: blue;
+}
+
+@media screen and (min-width: 520px) {
+  .fixedLinks {
+    display: none;
   }
 }

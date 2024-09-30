@@ -1,3 +1,4 @@
+import React from "react";
 import Link from "next/link";
 import style from "./about.module.css";
 
@@ -23,6 +24,13 @@ export default function About() {
             functionality.
           </p>
           <p>
+            My tech journey began in March 2022 during a prolonged school
+            strike. Eager to make productive use of my time, I initially
+            considered Python but was advised to explore web design. Although
+            hesitant at first, I quickly found joy in learning and building,
+            fueling my dedication to this field.
+          </p>
+          <p>
             {" "}
             With over 2 years of experience, I&apos;ve developed innovative and
             systematic web solutions to help solve complex problems. My goal has
@@ -32,13 +40,6 @@ export default function About() {
             attention to every detail of the user experience. My academic
             background complements my passion for crafting beautiful and
             efficient web applications.
-          </p>
-          <p>
-            My tech journey began in March 2022 during a prolonged school
-            strike. Eager to make productive use of my time, I initially
-            considered Python but was advised to explore web design. Although
-            hesitant at first, I quickly found joy in learning and building,
-            fueling my dedication to this field.
           </p>
           <p>
             As i continue my studies in Computer Science, I&apos;m motivated to

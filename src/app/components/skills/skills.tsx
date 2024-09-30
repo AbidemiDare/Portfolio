@@ -1,3 +1,5 @@
+import React from "react";
+
 import { FaCss3Alt } from "react-icons/fa";
 import style from "./skills.module.css";
 import { FaGit, FaGithub, FaHtml5, FaReact } from "react-icons/fa6";
@@ -63,9 +65,7 @@ export default function Skills() {
         </div>
 
         <div className={style.technicalSkills}>
-          <h3 className={style.technicalSkillTitle}>
-            Other soft skills includes:
-          </h3>
+          <h3 className={style.technicalSkillTitle}>Cognitive skills :</h3>
           <ul>
             <li>problem solving skills</li>
             <li>Adaptability</li>

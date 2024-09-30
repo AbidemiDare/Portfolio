@@ -52,20 +52,41 @@
   font-size: 1rem;
 }
 
+.projectLinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.firstLink,
 .projectLink {
   margin-top: 0.3rem;
-  color: #000000;
-  background: #ffd700;
   padding: 0.3rem 0.8rem;
   font-size: 0.9rem;
   font-weight: 600;
+  padding: 0.3rem 0.8rem;
+}
+
+.firstLink {
+  background: green;
+}
+
+.projectLink {
+  color: #000000;
+  background: #ffd700;
 }
 
 @media screen and (min-width: 520px) {
   .projectContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
     gap: 0 2rem;
+  }
+
+  .project {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
   }
 }
 
