@@ -6,7 +6,7 @@ export default function About() {
   return (
     <div>
       <section className={style.aboutSection}>
-        <h3 className={style.aboutHeader}>About me</h3>
+        <h3 className={style.aboutHeader}>About Me</h3>
 
         <div className={style.aboutUnderline}></div>
         <div className={style.aboutInfo}>

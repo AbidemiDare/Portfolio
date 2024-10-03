@@ -1,10 +1,15 @@
 .hero {
   width: 85vw;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 90px;
   display: grid;
   place-items: center;
   margin-bottom: 3.5rem;
+}
+
+.heroLinks {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .portfolioImgContainer {
@@ -12,11 +17,11 @@
   margin-bottom: 0.8rem;
   border: 5px solid white;
   border-radius: 50%;
+  overflow: hidden;
   -webkit-border-radius: ;
   -moz-border-radius: ;
   -ms-border-radius: ;
   -o-border-radius: ;
-  overflow: hidden;
 }
 
 .portfolioImgContainer::after {
@@ -40,10 +45,10 @@
   object-fit: cover;
   display: block;
   border-radius: 50%;
-  -webkit-border-radius: ;
-  -moz-border-radius: ;
-  -ms-border-radius: ;
-  -o-border-radius: ;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 .heroInfo {
@@ -84,46 +89,31 @@
 .heroBtn {
   cursor: pointer;
   color: black;
-  background: gold;
+  background: transparent;
+  border: 2px solid green;
+  color: white;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   padding: 0.7rem 1.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0 5px;
-  border: none;
   outline: none;
-  transition: 0.5s;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
+  transition: 0.2s;
   position: relative;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
 }
 
-/* .heroBtn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  z-index: 2;
-  background: goldenrod;
-  transition: 0.3s;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-} */
-
-/* .heroBtn:hover::after {
-  width: 100%;
-} */
+.heroBtn:hover {
+  background: green;
+  border: none;
+}
 
 .heroArrow {
-  margin-top: 5px;
   font-weight: bold;
   font-size: 0.8rem;
 }
@@ -132,55 +122,6 @@
   width: 100%;
   height: 3px;
   background: wheat;
-}
-
-@media screen and (min-width: 768px) {
-  .heroContainer {
-    width: 95vw;
-    margin: 0 auto;
-    margin-top: -1rem;
-    display: grid;
-    place-items: center;
-    grid-template-columns: auto auto;
-  }
-
-  .hero {
-    margin-top: 30px;
-    width: 32vw;
-  }
-
-  .portfolioImg {
-    width: 150px;
-    height: 150px;
-  }
-
-  .heroName,
-  .heroTitle {
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .heroContainer {
-    width: 85vw;
-  }
-
-  .hero {
-    margin-top: 60px;
-    width: 30vw;
-  }
-
-  .portfolioImg {
-    width: 180px;
-    height: 180px;
-  }
-
-  .heroName,
-  .heroTitle {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-  }
 }
 
 /* Fixed Links  */
@@ -245,5 +186,102 @@
 @media screen and (min-width: 520px) {
   .fixedLinks {
     display: none;
+  }
+
+  .heroLinks {
+    position: fixed;
+    top: 35%;
+    right: 3%;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+  }
+
+  .heroWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem 0;
+  }
+
+  .heroLinkBtn {
+    border: none;
+    background: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 0.2rem;
+  }
+
+  .heroEnvelope {
+    color: rgba(255, 0, 0, 0.7);
+    color: orange;
+  }
+
+  .heroLinkedIn {
+    color: rgba(0, 0, 255, 0.7);
+  }
+
+  .heroGithub {
+    color: black;
+    color: white;
+  }
+
+  .heroX {
+    color: blue;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .heroContainer {
+    width: 95vw;
+    margin: 0 auto;
+    margin-top: -1rem;
+    display: grid;
+    place-items: center;
+    grid-template-columns: auto auto;
+  }
+
+  .heroLinks {
+    right: 2%;
+  }
+
+  .hero {
+    margin-top: 30px;
+    width: 32vw;
+  }
+
+  .portfolioImg {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .heroContainer {
+    width: 85vw;
+  }
+
+  .hero {
+    margin-top: 60px;
+    width: 30vw;
+  }
+
+  .portfolioImg {
+    width: 180px;
+    height: 180px;
+  }
+
+  .heroName,
+  .heroTitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .heroLinks {
+    top: 30%;
   }
 }

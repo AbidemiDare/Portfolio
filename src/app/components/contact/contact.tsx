@@ -12,7 +12,7 @@ import {
 const Contact = () => {
   return (
     <div>
-      <section className={style.contact}>
+      <section className={style.contact} id="contact">
         <h2 className={style.contactTitle}>Let&apos;s connect</h2>
         <p className={style.contactDescription}>
           I&apos;d love to hear from you! Whether you have a job for me, project

@@ -5,8 +5,7 @@ import Link from "next/link";
 import style from "./page.module.css";
 import { useEffect, useRef } from "react";
 import {
-  FaArrowRight,
-  FaEnvelope,
+  FaDownload,
   FaGithub,
   FaTwitter,
   FaUser,
@@ -20,6 +19,7 @@ import Skills from "./components/skills/skills";
 import Contact from "./components/contact/contact";
 import Footer from "./components/footer/footer";
 import { FaLinkedin } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 
 const Home = () => {
   const typedElement = useRef<HTMLSpanElement | null>(null);
@@ -59,6 +59,40 @@ const Home = () => {
   return (
     <>
       <div className={style.container}>
+        <div className={style.heroLinks}>
+          <div className={style.heroWrapper}>
+            <button className={`${style.heroLinkBtn} ${style.heroEnvelope}`}>
+              <Link
+                target="_blank"
+                href="mailto:oluwadamilareadewakun@gmail.com"
+              >
+                {" "}
+                <SiGmail />
+              </Link>
+            </button>
+            <button className={`${style.heroLinkBtn} ${style.heroLinkedIn}`}>
+              <Link
+                target="_blank"
+                href="https://www.linkedin.com/in/adewakun-oluwadamilare-641b22281/"
+              >
+                {" "}
+                <FaLinkedin />
+              </Link>
+            </button>
+            <button className={`${style.heroLinkBtn} ${style.heroGithub}`}>
+              <Link target="_blank" href="https://github.com/AbidemiDare">
+                {" "}
+                <FaGithub />
+              </Link>{" "}
+            </button>
+            <button className={`${style.heroLinkBtn} ${style.heroX}`}>
+              <Link target="_blank" href="https://x.com/Abidemi_Darey">
+                <FaTwitter />{" "}
+              </Link>{" "}
+            </button>
+          </div>
+        </div>
+
         <div className={style.heroContainer}>
           <section className={style.hero}>
             <div className={style.portfolioImgContainer}>
@@ -84,8 +118,13 @@ const Home = () => {
               </h2>
             </div>
 
-            <Link href="/contact" className={style.heroBtn}>
-              Hire me <FaArrowRight className={style.heroArrow} />
+            <Link
+              target="_blank"
+              href="./adewakun.pdf"
+              download="adewakun.pdf"
+              className={style.heroBtn}
+            >
+              Download CV <FaDownload className={style.heroArrow} />
             </Link>
           </section>
 
@@ -102,7 +141,7 @@ const Home = () => {
                 href="mailto:oluwadamilareadewakun@gmail.com"
               >
                 {" "}
-                <FaEnvelope />
+                <SiGmail />
               </Link>
             </button>
             <button className={`${style.fixedBtn} ${style.fixedLinkedIn}`}>

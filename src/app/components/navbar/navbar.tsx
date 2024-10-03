@@ -7,7 +7,6 @@ import { FaMoon, FaSun } from "react-icons/fa6";
 import style from "./navbar.module.css";
 import Menu from "../menu/menu";
 
-
 export default function Navbar() {
   const [bar, setBar] = useState<boolean>(false);
   const [theme, setTheme] = useState(false);
@@ -31,8 +30,8 @@ export default function Navbar() {
 
   useEffect(() => {
     if (theme) {
-      document.body.style.background = "#ffffff";
-      document.body.style.color = "#000000";
+      document.body.style.background = "#800020";
+      document.body.style.color = "#ffffff";
     } else {
       document.body.style.background = "#000000";
       document.body.style.color = "#ffffff";
@@ -48,9 +47,9 @@ export default function Navbar() {
     setTheme(!theme);
   };
 
-  const openBar = () => {
-    setBar(!bar);
-  };
+  // const openBar = () => {
+  //   setBar(!bar);
+  // };
 
   return (
     <div>
@@ -61,8 +60,14 @@ export default function Navbar() {
             className={style.topLink}
             href="https://www.twitter.com/abidemi.darey"
           >
-            <span className={style.topLinkOne}>Abidemi</span>
-            <span className={style.topLinkTwo}>Dare</span>
+            <Link
+              target="_blank"
+              href="./adewakun.pdf"
+              download="adewakun.pdf"
+              className={style.navBtn}
+            >
+              Abidemi.<span>CV</span>
+            </Link>
           </Link>
 
           <button className={style.navTheme} onClick={handleTheme}>
@@ -75,30 +80,25 @@ export default function Navbar() {
 
           <ul className={style.navLinks}>
             <li className={style.navLink}>
-              <Link href="/about" className={style.link}>
-                about
-              </Link>
-            </li>
-            <li className={style.navLink}>
-              <Link href="/projects" className={style.link}>
+              <Link href="#projects" className={style.link}>
                 projects
               </Link>
             </li>
             <li className={style.navLink}>
-              <Link href="/contact" className={style.link}>
+              <Link href="#contact" className={style.link}>
                 contact
               </Link>
             </li>
           </ul>
 
-          <button
+          {/* <button
             className={`${style.faBar} ${bar ? style.show : " "}`}
             onClick={openBar}
           >
             <div className={style.barOne}></div>
             <div className={style.barTwo}></div>
             <div className={style.barThree}></div>
-          </button>
+          </button> */}
         </div>
       </nav>
 
