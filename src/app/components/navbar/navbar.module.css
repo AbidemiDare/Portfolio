@@ -12,7 +12,14 @@
 
 .fixed {
   position: fixed;
-  background: lightgrey;
+}
+
+.brown {
+  background: #800020;
+}
+
+.dark {
+  background: #000000;
 }
 
 .navWrapper {
@@ -48,7 +55,7 @@
 
 .themeSun,
 .themeMoon {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 .themeSun {

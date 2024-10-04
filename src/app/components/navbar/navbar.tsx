@@ -22,7 +22,6 @@ export default function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -47,14 +46,14 @@ export default function Navbar() {
     setTheme(!theme);
   };
 
-  // const openBar = () => {
-  //   setBar(!bar);
-  // };
-
   return (
     <div>
       {/* <Home bar={bar}/> */}
-      <nav className={`${style.navBar} ${fixedNav ? style.fixed : " "}`}>
+      <nav
+        className={`${style.navBar} ${fixedNav ? style.fixed : " "} ${
+          theme ? style.brown : style.dark
+        }`}
+      >
         <div className={style.navWrapper}>
           <Link
             className={style.topLink}
@@ -90,18 +89,8 @@ export default function Navbar() {
               </Link>
             </li>
           </ul>
-
-          {/* <button
-            className={`${style.faBar} ${bar ? style.show : " "}`}
-            onClick={openBar}
-          >
-            <div className={style.barOne}></div>
-            <div className={style.barTwo}></div>
-            <div className={style.barThree}></div>
-          </button> */}
         </div>
       </nav>
-
       <hr className={style.navHorizontal} />
 
       <Menu bar={bar} setBar={setBar} />

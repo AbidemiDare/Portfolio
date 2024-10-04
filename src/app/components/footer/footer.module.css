@@ -1,10 +1,16 @@
 .footer {
   background: silver;
-  padding: 1rem 0;
+  padding: 3rem 0;
   text-align: center;
   color: black;
 }
 
 .footer p {
   font-weight: bold;
+}
+
+@media screen and (min-width: 520px) {
+  .footer {
+    padding: 1rem 0;
+  }
 }
