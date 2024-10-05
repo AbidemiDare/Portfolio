@@ -1,13 +1,8 @@
 import React from "react";
 import style from "./contact.module.css";
 import Link from "next/link";
-import {
-  FaEnvelope,
-  FaGithub,
-  FaInstagram,
-  FaLinkedin,
-  FaX,
-} from "react-icons/fa6";
+import { FaGithub, FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { SiGmail } from "react-icons/si";
 
 const Contact = () => {
   return (
@@ -22,7 +17,7 @@ const Contact = () => {
         <div className={style.contactDetails}>
           <div className={style.contactLink}>
             <span className={style.contactEmail}>
-              <FaEnvelope />
+              <SiGmail />
             </span>
             <Link target="_blank" href="mailto:oluwadamilareadewakun@gmail.com">
               {" "}
@@ -55,7 +50,7 @@ const Contact = () => {
 
           <div className={style.contactLink}>
             <span className={style.contactGitHub}>
-              <FaX />
+              <FaXTwitter />
             </span>
             <Link target="_blank" href="https://x.com/Abidemi_Darey">
               {" "}

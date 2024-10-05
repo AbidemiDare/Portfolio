@@ -128,7 +128,7 @@
 
 .fixedLinks {
   position: fixed;
-  bottom: 2%;
+  bottom: 5%;
   left: 0;
   width: 100%;
   opacity: 0;
@@ -262,6 +262,7 @@
 @media screen and (min-width: 992px) {
   .heroContainer {
     width: 85vw;
+    padding-bottom: 1rem;
   }
 
   .hero {

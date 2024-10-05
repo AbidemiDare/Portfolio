@@ -4,12 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import style from "./page.module.css";
 import { useEffect, useRef } from "react";
-import {
-  FaDownload,
-  FaGithub,
-  FaTwitter,
-  FaUser,
-} from "react-icons/fa6";
+import { FaDownload, FaGithub, FaUser, FaXTwitter } from "react-icons/fa6";
 import Image from "next/image";
 import Typed from "typed.js";
 import { BsPersonWorkspace } from "react-icons/bs";
@@ -87,7 +82,7 @@ const Home = () => {
             </button>
             <button className={`${style.heroLinkBtn} ${style.heroX}`}>
               <Link target="_blank" href="https://x.com/Abidemi_Darey">
-                <FaTwitter />{" "}
+                <FaXTwitter />{" "}
               </Link>{" "}
             </button>
           </div>
@@ -161,7 +156,7 @@ const Home = () => {
             </button>
             <button className={`${style.fixedBtn} ${style.fixedX}`}>
               <Link target="_blank" href="https://x.com/Abidemi_Darey">
-                <FaTwitter />{" "}
+                <FaXTwitter />{" "}
               </Link>{" "}
             </button>
           </div>
