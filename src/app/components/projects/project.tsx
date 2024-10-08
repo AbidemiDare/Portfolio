@@ -97,10 +97,10 @@ export default function Project() {
 
           {/* project */}
           <div className={style.project}>
-            <Link href="https://bbnps.netlify.app/" target="_blank">
+            <Link href="https://tfsweb.netlify.app/" target="_blank">
               <Image
                 className={style.projectImg}
-                src="/Images/bbnps.png"
+                src="/Images/tfs.png"
                 height={220}
                 width={120}
                 alt="project image"
@@ -108,12 +108,11 @@ export default function Project() {
             </Link>
 
             <div className={style.projectInfo}>
-              <h4 className={style.projectHeader}>A School Project</h4>
+              <h4 className={style.projectHeader}>A Commerce Project</h4>
               <div className={style.projectDescription}>
-                An overview of how a school website should look like with
-                various features.
+                Tfs is a commerce project which was built as a practice app
                 <p>
-                  <span>Core technology</span>: JavaScript
+                  <span>Core technology</span>: JavaScript and TypeScript
                 </p>
               </div>
             </div>
@@ -121,7 +120,7 @@ export default function Project() {
             <div className={style.projectLinks}>
               <Link
                 target="_blank"
-                href="https://github.com/AbidemiDare/BBNPS"
+                href="https://github.com/AbidemiDare/Commerce-web"
                 className={style.firstLink}
               >
                 GitHub
@@ -129,7 +128,7 @@ export default function Project() {
               <Link
                 target="_blank"
                 className={style.projectLink}
-                href="https://bbnps.netlify.app/"
+                href="https://tfsweb.netlify.app/"
               >
                 Live Demo
               </Link>

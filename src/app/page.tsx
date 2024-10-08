@@ -113,14 +113,14 @@ const Home = () => {
               </h2>
             </div>
 
-            <Link
+            <a
               target="_blank"
-              href="./adewakun.pdf"
-              download="adewakun.pdf"
+              href="./adewakun-oluwadamilare.pdf"
+              download="adewakun-oluwadamilare.pdf"
               className={style.heroBtn}
             >
               Download CV <FaDownload className={style.heroArrow} />
-            </Link>
+            </a>
           </section>
 
           <About />
