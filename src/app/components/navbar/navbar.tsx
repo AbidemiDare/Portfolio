@@ -56,17 +56,12 @@ export default function Navbar() {
       >
         <div className={style.navWrapper}>
           <Link
-            className={style.topLink}
-            href="https://www.twitter.com/abidemi.darey"
+            target="_blank"
+            href={`./adewakun-oluwadamilare.pdf?${new Date().getTime()}`}
+            download="adewakun-oluwadamilare.pdf"
+            className={style.heroBtn}
           >
-            <Link
-              target="_blank"
-              href="./adewakun.pdf"
-              download="adewakun.pdf"
-              className={style.navBtn}
-            >
-              Abidemi.<span>CV</span>
-            </Link>
+            Abidemi.<span>CV</span>
           </Link>
 
           <button className={style.navTheme} onClick={handleTheme}>
