@@ -57,7 +57,7 @@ export default function Navbar() {
         <div className={style.navWrapper}>
           <Link
             target="_blank"
-            href={`./adewakun-oluwadamilare.pdf?${new Date().getTime()}`}
+            href="./adewakun-oluwadamilare.pdf"
             download="adewakun-oluwadamilare.pdf"
             className={style.navBtn}
           >
