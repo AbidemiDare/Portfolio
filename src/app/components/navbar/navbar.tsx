@@ -59,7 +59,7 @@ export default function Navbar() {
             target="_blank"
             href={`./adewakun-oluwadamilare.pdf?${new Date().getTime()}`}
             download="adewakun-oluwadamilare.pdf"
-            className={style.heroBtn}
+            className={style.navBtn}
           >
             Abidemi.<span>CV</span>
           </Link>
