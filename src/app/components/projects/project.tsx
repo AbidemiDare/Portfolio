@@ -114,6 +114,7 @@ export default function Project() {
                 <p>
                   <span>Core technologies</span>: JavaScript and TypeScript
                 </p>
+                <h3 className={style.work}>Work in progress!!!</h3>
               </div>
             </div>
 
