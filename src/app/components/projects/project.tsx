@@ -112,7 +112,7 @@ export default function Project() {
               <div className={style.projectDescription}>
                 Tfs is a commerce project which was built as a practice app
                 <p>
-                  <span>Core technology</span>: JavaScript and TypeScript
+                  <span>Core technologies</span>: JavaScript and TypeScript
                 </p>
               </div>
             </div>
