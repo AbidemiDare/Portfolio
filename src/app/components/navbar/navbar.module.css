@@ -35,6 +35,12 @@
   font-size: 13px;
   font-weight: 500;
   cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.navBtn a {
+  color: white;
 }
 
 .navBtn span {

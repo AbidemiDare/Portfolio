@@ -55,14 +55,15 @@ export default function Navbar() {
         }`}
       >
         <div className={style.navWrapper}>
-          <a
-            target="_blank"
-            href="./adewakun-oluwadamilare.pdf"
-            download="adewakun-oluwadamilare.pdf"
-            className={style.navBtn}
-          >
-            Abidemi.<span>CV</span>
-          </a>
+          <button className={style.navBtn}>
+            <a
+              target="_blank"
+              href="./adewakun-oluwadamilare.pdf"
+              download="adewakun-oluwadamilare.pdf"
+            >
+              Abidemi.<span>CV</span>
+            </a>
+          </button>
 
           <button className={style.navTheme} onClick={handleTheme}>
             {theme ? (

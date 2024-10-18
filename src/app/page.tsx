@@ -114,14 +114,15 @@ const Home = () => {
               </h2>
             </div>
 
-            <a
-              target="_blank"
-              href="./adewakun-oluwadamilare.pdf"
-              download="adewakun-oluwadamilare.pdf"
-              className={style.heroBtn}
-            >
-              Download CV <FaDownload className={style.heroArrow} />
-            </a>
+            <button className={style.heroBtn}>
+              <a
+                target="_blank"
+                href="./adewakun-oluwadamilare.pdf"
+                download="adewakun-oluwadamilare.pdf"
+              >
+                Download CV <FaDownload className={style.heroArrow} />
+              </a>
+            </button>
           </section>
 
           <About />
@@ -165,7 +166,7 @@ const Home = () => {
 
         <Project />
         <Skills />
-<Hobbies/>
+        <Hobbies />
         <Contact />
         <Footer />
       </div>
