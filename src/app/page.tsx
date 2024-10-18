@@ -15,6 +15,7 @@ import Contact from "./components/contact/contact";
 import Footer from "./components/footer/footer";
 import { FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
+import Hobbies from "./components/hobbies/hobbies";
 
 const Home = () => {
   const typedElement = useRef<HTMLSpanElement | null>(null);
@@ -113,14 +114,14 @@ const Home = () => {
               </h2>
             </div>
 
-            <Link
+            <a
               target="_blank"
               href="./adewakun-oluwadamilare.pdf"
               download="adewakun-oluwadamilare.pdf"
               className={style.heroBtn}
             >
               Download CV <FaDownload className={style.heroArrow} />
-            </Link>
+            </a>
           </section>
 
           <About />
@@ -164,6 +165,7 @@ const Home = () => {
 
         <Project />
         <Skills />
+<Hobbies/>
         <Contact />
         <Footer />
       </div>

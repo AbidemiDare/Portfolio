@@ -1,0 +1,86 @@
+.hobbies {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  width: 85vw;
+  margin: 0 auto;
+}
+
+.hobbyTitle {
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  color: goldenrod;
+}
+
+.hobbiesWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hobby {
+  background: rgba(211, 211, 211, 0.5);
+  display: grid;
+  gap: 0 0.5rem;
+  justify-content: left;
+  width: 70%;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.hobby span {
+  font-size: 3rem;
+  color: rgb(0, 0, 0, 0.5);
+}
+
+.hobbyText {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+}
+
+@media screen and (min-width: 520px) {
+  .hobbiesWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hobby {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hobbiesWrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hobby {
+    padding: 3rem 1.5rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .hobbiesWrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .hobby {
+    width: 80%;
+    padding: 2rem 1.5rem;
+    gap: 0 5px;
+  }
+
+  .hobby span {
+    font-size: 5rem;
+    color: #000000;
+  }
+
+  .hobbyText {
+    font-size: 1.5rem;
+  }
+}
