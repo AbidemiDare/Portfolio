@@ -117,10 +117,10 @@ const Home = () => {
             <button className={style.heroBtn}>
               <a
                 target="_blank"
-                href="./adewakun-oluwadamilare.pdf"
-                download="adewakun-oluwadamilare.pdf"
+                href="./adewakun-oluwadamilare-resume.pdf"
+                download="adewakun-oluwadamilare-resume.pdf"
               >
-                Download CV <FaDownload className={style.heroArrow} />
+                Download Resume <FaDownload className={style.heroArrow} />
               </a>
             </button>
           </section>
