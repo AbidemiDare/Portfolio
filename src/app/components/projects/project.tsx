@@ -97,6 +97,51 @@ export default function Project() {
 
           {/* project */}
           <div className={style.project}>
+            <Link
+              href="https://quiz-app-blush-chi-85.vercel.app/"
+              target="_blank"
+            >
+              <Image
+                className={style.projectImg}
+                src="/Images/quizM.PNG"
+                height={220}
+                width={120}
+                alt="project image"
+              />
+            </Link>
+
+            <div className={style.projectInfo}>
+              <h4 className={style.projectHeader}>Quiz App</h4>
+              <div className={style.projectDescription}>
+                An app that gives you a total of 15minutes to brainstorm on 30
+                General knowledge questions
+                <p>
+                  <span>Core technologies</span>: ReactJs, TypeScript and NextJs
+                </p>
+              </div>
+            </div>
+
+            <div className={style.projectLinks}>
+              <Link
+                target="_blank"
+                href="https://github.com/AbidemiDare/Quiz-App"
+                className={style.firstLink}
+              >
+                GitHub
+              </Link>
+              <Link
+                target="_blank"
+                className={style.projectLink}
+                href="https://quiz-app-blush-chi-85.vercel.app/"
+              >
+                Live Demo
+              </Link>
+            </div>
+          </div>
+          {/* end of single project */}
+
+          {/* project */}
+          <div className={style.project}>
             <Link href="https://tfsweb.netlify.app/" target="_blank">
               <Image
                 className={style.projectImg}
