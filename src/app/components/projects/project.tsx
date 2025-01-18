@@ -116,7 +116,8 @@ export default function Project() {
                 An app that gives you a total of 15minutes to brainstorm on 30
                 General knowledge questions
                 <p>
-                  <span>Core technologies</span>: ReactJs, TypeScript and NextJs
+                  <span>Core technologies </span>: ReactJs, TypeScript and
+                  NextJs
                 </p>
               </div>
             </div>
