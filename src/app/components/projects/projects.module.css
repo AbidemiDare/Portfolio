@@ -57,6 +57,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 0.5rem;
 }
 
 .firstLink,
@@ -70,10 +71,14 @@
 
 .firstLink {
   background: green;
+  padding: 0.7rem;
+  letter-spacing: 1px;
 }
 
 .projectLink {
   color: #000000;
+  padding: 0.7rem;
+
   background: #ffd700;
 }
 

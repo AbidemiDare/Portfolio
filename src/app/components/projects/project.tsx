@@ -29,6 +29,7 @@ export default function Project() {
                 <p>
                   <span>Core technologies</span>: ReactJs and NextJs
                 </p>
+                <h4>Created : 2024</h4>
               </div>
             </div>
 
@@ -71,6 +72,7 @@ export default function Project() {
                 <p>
                   <span>Core technology</span>: JavaScript
                 </p>
+                <h4>Created : 2023</h4>
               </div>
             </div>
 
@@ -117,6 +119,7 @@ export default function Project() {
                   <span>Core technologies </span>: ReactJs, TypeScript and
                   NextJs
                 </p>
+                <h4>Created : 2024</h4>
               </div>
             </div>
 
@@ -158,7 +161,7 @@ export default function Project() {
                 <p>
                   <span>Core technologies</span>: JavaScript and TypeScript
                 </p>
-                <h3 className={style.work}>Work in progress!!!</h3>
+                <h4>Created : 2022</h4>
               </div>
             </div>
 

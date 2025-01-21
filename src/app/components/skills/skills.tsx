@@ -5,7 +5,7 @@ import style from "./skills.module.css";
 import { FaGit, FaGithub, FaHtml5, FaReact } from "react-icons/fa6";
 import { IoLogoJavascript } from "react-icons/io";
 import { RiNextjsFill } from "react-icons/ri";
-import { SiTypescript } from "react-icons/si";
+import { SiTailwindcss, SiTypescript } from "react-icons/si";
 
 export default function Skills() {
   return (
@@ -26,6 +26,12 @@ export default function Skills() {
                 <FaCss3Alt />
               </span>{" "}
               CSS3
+            </div>
+            <div className={style.skill}>
+              <span className={`${style.skillLogo} ${style.cssLogo}`}>
+                <SiTailwindcss />
+              </span>{" "}
+              Tailwind Css
             </div>
             <div className={style.skill}>
               <span className={`${style.skillLogo} ${style.jsLogo}`}>
